@@ -1,0 +1,31 @@
+/*********************
+ * MOBILE BREAKPOINT *
+ *********************/
+$mobile-breakpoint: 767px !default;
+@mixin mobile($breakpoint: $mobile-breakpoint) {
+  @media screen and (max-width: $breakpoint) { @content; }
+}
+
+@mixin aboveMobile($breakpoint: 768px) {
+  @media screen and (min-width: $breakpoint) { @content; }
+}
+
+/*********************
+ * TABLET BREAKPOINT *
+ *********************/
+$tablet-breakpoint: 991px !default;
+@mixin tablet($breakpoint: $tablet-breakpoint) {
+  @media screen and (max-width: $breakpoint) { @content; }
+}
+
+@mixin aboveTablet($breakpoint: 992px) {
+  @media screen and (min-width: $breakpoint) { @content; }
+}
+
+/**********************
+ * DESKTOP BREAKPOINT *
+ **********************/
+$mobile-breakpoint: 1199px !default;
+@mixin desktop($breakpoint: $mobile-breakpoint) {
+  @media screen and (max-width: $breakpoint) { @content; }
+}

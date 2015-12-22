@@ -1,0 +1,29 @@
+/****************
+ * BASIC BUTTON *
+ ****************/
+
+@mixin button($light, $dark, $inset, $font) {
+  transition: all 0.3s ease;
+  background-color: $light;
+  background: -webkit-linear-gradient(180deg, $dark 10%, $light 90%);
+  background:    -moz-linear-gradient(180deg, $dark 10%, $light 90%);
+  background:     -ms-linear-gradient(180deg, $dark 10%, $light 90%);
+  background:      -o-linear-gradient(180deg, $dark 10%, $light 90%);
+  background:         linear-gradient(180deg, $dark 10%, $light 90%);
+  color: $font;
+  &:hover,
+  &:focus,
+  &:visited {
+    background-color: $dark;
+    background: -webkit-linear-gradient(180deg, $light 10%, $dark 90%);
+    background:    -moz-linear-gradient(180deg, $light 10%, $dark 90%);
+    background:     -ms-linear-gradient(180deg, $light 10%, $dark 90%);
+    background:      -o-linear-gradient(180deg, $light 10%, $dark 90%);
+    background:         linear-gradient(180deg, $light 10%, $dark 90%);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:active {
+    box-shadow: inset 0 0 6px 3px $inset;
+  }
+}
